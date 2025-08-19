@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Cadastro - Fox Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center min-h-screen font-sans">
+
+  <!-- CONTAINER -->
+  <div id="authContainer" class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md transition-all duration-500">
+    
+    <div class="text-center mb-6">
+      <h1 class="text-3xl font-bold text-gray-800">Fox Gym</h1>
+      <p class="text-gray-500 mt-1">Faça login ou cadastre-se</p>
+    </div>
+
+    <!-- FORM LOGIN -->
+    <form id="loginForm" class="flex flex-col space-y-4">
+      <input id="loginEmail" type="email" placeholder="Email" required class="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <input id="loginPassword" type="password" placeholder="Senha" required class="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
+      <button type="submit" class="bg-blue-500 text-white py-3 rounded-xl hover:bg-blue-600 transition-colors">Entrar</button>
+      <p class="text-gray-500 text-sm text-center">Não tem conta? 
+        <span id="showRegister" class="text-blue-500 cursor-pointer hover:underline">Cadastre-se</span>
+      </p>
+    </form>
+
+    <!-- FORM CADASTRO -->
+    <form id="registerForm" class="flex flex-col space-y-4 hidden">
+      <input id="registerName" type="text" placeholder="Nome" required class="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400">
+      <input id="registerEmail" type="email" placeholder="Email" required class="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400">
+      <input id="registerPassword" type="password" placeholder="Senha" required class="p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400">
+      <button type="submit" class="bg-green-500 text-white py-3 rounded-xl hover:bg-green-600 transition-colors">Cadastrar</button>
+      <p class="text-gray-500 text-sm text-center">Já tem conta? 
+        <span id="showLogin" class="text-green-500 cursor-pointer hover:underline">Entre aqui</span>
+      </p>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

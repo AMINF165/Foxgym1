@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Fox Gym</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin: 40px; }
+    .produto { display: inline-block; margin: 100px; cursor: pointer; vertical-align: top; }
+    .produto img { width: 200px; transition: transform 0.3s; display: block; margin: 0 auto; }
+    .produto p { margin-top: 10px; }
+    .produto img:hover { transform: scale(1.1); }
+    .descricao { display: none; margin-top: 80px; text-align: left; border-top: 5px solid #ccc; padding-top: 90px; }
+    .descricao img { width: 150px; display: block; margin-bottom: 10px; }
+    button { margin-top: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<h1>Loja Fox Gym</h1>
+
+
+<div class="text-center mb-4">
+  <a href="Untitled-4.html" class="text-blue-500 dark:text-blue-400 hover:underline">
+    Voltar para a página principal
+  </a>
+</div>
+
+<!-- Produtos -->
+<div class="produto" onclick="mostrarDescricao('whey')">
+  <img src="whay.png" alt="Whey Protein">
+  <p>Whey Protein</p>
+</div> 
+
+
+
+<div class="produto" onclick="mostrarDescricao('creatina')">
+  <img src="creatina.png" alt="Creatina">
+  <p>Creatina</p>
+</div>
+
+<div class="produto" onclick="mostrarDescricao('BCAA')">
+  <img src="bcaa.png" alt="BCAA">
+  <p>BCAA</p>
+</div>
+
+
+<div class="produto" onclick="mostrarDescricao('pre treino')">
+  <img src="whay.png" alt="pre treino">
+  <p>pre treino </p>
+</div>
+<!-- Descrições -->
+<div id="whey" class="descricao">
+  <h2>Whey Protein</h2>
+  <img src="whay.png" alt="Whey Protein">
+  <p>O Whey Protein é um suplemento rico em proteínas de alto valor biológico, ideal para auxiliar na recuperação muscular e no crescimento da massa magra.</p>
+  <button onclick="fecharDescricao('whey')">Fechar</button>
+</div>
+
+<div id="creatina" class="descricao">
+  <h2>Creatina</h2>
+  <img src="creatina.png" alt="Creatina">
+  <p>A Creatina é um suplemento que ajuda a aumentar a força, a performance e a resistência muscular durante os treinos intensos.</p>
+  <button onclick="fecharDescricao('creatina')">Fechar</button>
+</div>
+
+<div id="BCAA" class="descricao">
+  <h2>BCAA</h2>
+  <img src="bcaa.png"BCAA">
+  <p>o BCAA tem como função ajudar na recuperação, reduzir fadiga e estimular o crescimento muscular, sendo mais útil em treinos intensos ou quando a dieta não fornece proteínas suficientes</p>
+  <button onclick="fecharDescricao('BCAA')">Fechar</button>
+</div>
+
+<div id="pre treino" class="descricao">
+  <h2>pre treino </h2>
+  <img src="pre trino.png"Albumina">
+  <p> o pré-treino serve para dar mais disposição, intensidade e resistência ao treino, ajudando o praticante a melhorar o desempenho.</p>
+  <button onclick="fecharDescricao('albumina')">Fechar</button>
+</div>
+
+<script>
+function mostrarDescricao(id){
+  document.querySelectorAll('.descricao').forEach(div => div.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+function fecharDescricao(id){
+  document.getElementById(id).style.display = 'none';
+}
+</script>
+
+</body>
+</html>
